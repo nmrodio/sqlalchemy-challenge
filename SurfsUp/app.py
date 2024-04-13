@@ -94,12 +94,12 @@ def precipitation():
 @app.route("/api/v1.0/stations")
 def stations():
     
-    """Retrieve list of stations (ids, names) """
+    """Retrieve list of stations"""
 
      # Create our session (link) from Python to the DB
     session=Session(engine)
 
-    # Query to find all the station ids(station) and names data
+    # Query to find all the station ids(station) data
     results = session.query(station.station).all()
 
     #Closing "stations" session
